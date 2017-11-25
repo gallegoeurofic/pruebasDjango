@@ -1,0 +1,38 @@
+{% extends 'Vendedores\base.html' %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	{% block titulo %}
+	<title>Listado Vendedores</title>
+	{% endblock %}
+</head>
+<body>
+	{% block contenido%}
+
+		<div class="table-responsive table-bordered">
+			<table class="table">
+			  <thead class="thead-dark">
+			    <tr>
+			      <th scope="col">Id</th>
+			      <th scope="col">Nombre</th>
+			      <th scope="col">Apellidos</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			  	{% for x in lista_vendedores %}
+			    <tr>
+			      <td>{{ x.id }}</td>
+			      <td>{{ x.nombre }}</td>
+			      <td>{{ x.apellidos }}</td>
+			    </tr>
+			    {% endfor %}
+			  </tbody>
+			</table>
+		</div>
+
+	{% endblock %}
+</body>
+</html>
+
+
